@@ -1030,4 +1030,301 @@ File: tikzlibrarytrees.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \l__tikzsymbols_dSleepey_nr_arguments_int=\count428
 \l__tikzsymbols_Maskey_nr_arguments_int=\count429
 \l__tikzsymbols_NiceReapey_nr_arguments_int=\count430
-\l__tik
+\l__tikzsymbols_Strichmaxerl_nr_arguments_int=\count431
+\l__tikzsymbols_Person_nr_arguments_int=\count432
+\l__tikzsymbols_Heart_nr_arguments_int=\count433
+\l__tikzsymbols_dHeart_nr_arguments_int=\count434
+\l__tikzsymbols_HeartBroken_nr_arguments_int=\count435
+\l__tikzsymbols_Candle_nr_arguments_int=\count436
+\l__tikzsymbols_Fire_nr_arguments_int=\count437
+\l__tikzsymbols_Coffeecup_nr_arguments_int=\count438
+\l__tikzsymbols_Chair_nr_arguments_int=\count439
+\l__tikzsymbols_Bed_nr_arguments_int=\count440
+\l__tikzsymbols_Tribar_nr_arguments_int=\count441
+\l__tikzsymbols_Moai_nr_arguments_int=\count442
+\l__tikzsymbols_Snowman_nr_arguments_int=\count443
+\l__tikzsymbols_BasicTree_nr_arguments_int=\count444
+\l__tikzsymbols_WorstTree_nr_arguments_int=\count445
+\l__tikzsymbols_Springtree_nr_arguments_int=\count446
+\l__tikzsymbols_Summertree_nr_arguments_int=\count447
+\l__tikzsymbols_Autumntree_nr_arguments_int=\count448
+\l__tikzsymbols_Wintertree_nr_arguments_int=\count449
+)
+\c@tcb@cnt@Theorem=\count450
+\c@tcb@cnt@theorem=\count451
+\c@tcb@cnt@Corollary=\count452
+\c@tcb@cnt@corollary=\count453
+\c@tcb@cnt@Lenma=\count454
+\c@tcb@cnt@lenma=\count455
+\c@tcb@cnt@Prop=\count456
+\c@tcb@cnt@prop=\count457
+\c@tcb@cnt@claim=\count458
+\c@tcb@cnt@Exercise=\count459
+\c@tcb@cnt@exercise=\count460
+\c@tcb@cnt@Example=\count461
+\c@tcb@cnt@example=\count462
+\c@tcb@cnt@Definition=\count463
+\c@tcb@cnt@definition=\count464
+\c@tcb@cnt@question=\count465
+\c@tcb@cnt@qstion=\count466
+\c@tcb@cnt@wconc=\count467
+ (G:\Latex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (G:\Latex\tex/latex/pgf-blur\tikzlibraryshadows.blur.code.tex  v1.02, 2012/12/09 (G:\Latex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfbs@fading@count=\count468
+)
+\c@mylabelcounter=\count469
+\diffdbox=\box145
+ (G:\Latex\tex/latex/titlesec\titletoc.sty
+Package: titletoc 2025/01/04 v2.17 TOC entries
+\ttl@leftsep=\dimen332
+)) (macros.tex) (letterfonts.tex) (G:\Latex\tex/latex/chemfig\chemfig.sty (G:\Latex\tex/generic/chemfig\chemfig.tex (G:\Latex\tex/generic/simplekv\simplekv.tex
+Package: simplekv 2023/10/02 v0.2c Simple keyval package (CT)
+)
+\CF_cnt_atomgroup=\count470
+\CF_cnt_group=\count471
+\CF_cnt_atom=\count472
+\CF_cnt_cycle=\count473
+\CF_cnt_cyclebonds=\count474
+\CF_cnt_compound=\count475
+\CF_dim=\dimen333
+\CF_turnangle=\dimen334
+\CF_arrowsize=\dimen335
+\CF_zero=\dimen336
+\CF_box=\box146
+\CF_boxstuff=\box147
+\CF_testbox=\box148
+\CF_chargebox=\box149
+\CF_substtoks=\toks55
+)
+Package: chemfig 2023/12/28 v1.66 Draw molecule with an easy syntax (CT)
+) (G:\Latex\tex/latex/base\fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+ (G:\Latex\tex/latex/base\ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+)) (G:\Latex\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen337
+\lightrulewidth=\dimen338
+\cmidrulewidth=\dimen339
+\belowrulesep=\dimen340
+\belowbottomsep=\dimen341
+\aboverulesep=\dimen342
+\abovetopsep=\dimen343
+\cmidrulesep=\dimen344
+\cmidrulekern=\dimen345
+\defaultaddspace=\dimen346
+\@cmidla=\count476
+\@cmidlb=\count477
+\@aboverulesep=\dimen347
+\@belowrulesep=\dimen348
+\@thisruleclass=\count478
+\@lastruleclass=\count479
+\@thisrulewidth=\dimen349
+) (G:\Latex\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen350
+\c@nlinenum=\count480
+\TeXr@lab=\toks56
+) (PQI.aux)
+\openout1 = `PQI.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 22.
+LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 22.
+ (G:\Latex\tex/latex/newpx\omlnpxmi.fd
+File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
+)
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 22.
+LaTeX Font Info:    Trying to load font information for U+npxexa on input line 22.
+ (G:\Latex\tex/latex/newpx\unpxexa.fd
+File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
+)
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 22.
+LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 22.
+ (G:\Latex\tex/latex/newpx\lmsnpxsy.fd
+File: lmsnpxsy.fd 2016/07/04 Fontinst v1.933 font definitions for LMS/npxsy.
+)
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 22.
+LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 22.
+ (G:\Latex\tex/latex/newpx\lmxnpxexx.fd
+File: lmxnpxexx.fd 2016/07/04 Fontinst v1.933 font definitions for LMX/npxexx.
+)
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(61.42993pt, 491.43513pt, 61.42993pt)
+* v-part:(T,H,B)=(61.42993pt, 676.63455pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=491.43513pt
+* \textheight=676.63455pt
+* \oddsidemargin=-10.84006pt
+* \evensidemargin=-10.84006pt
+* \topmargin=-47.84006pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=14.45377pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Command `\dddot' is already robust on input line 22.
+LaTeX Info: Command `\ddddot' is already robust on input line 22.
+(G:\Latex\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count481
+\scratchdimen=\dimen351
+\scratchbox=\box150
+\nofMPsegments=\count482
+\nofMParguments=\count483
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count484
+\MPscratchDim=\dimen352
+\MPnumerator=\count485
+\makeMPintoPDFobject=\count486
+\everyMPtoPDFconversion=\toks58
+) (G:\Latex\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (G:\Latex\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package hyperref Info: Link coloring ON on input line 22.
+\c@lstlisting=\count487
+ (G:\Latex\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks59
+\inpenc@posthook=\toks60
+) (G:\Latex\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (G:\Latex\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (G:\Latex\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+ (G:\Latex\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+ (G:\Latex\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+npxmia on input line 25.
+ (G:\Latex\tex/latex/newpx\unpxmia.fd
+File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+npxsym on input line 25.
+ (G:\Latex\tex/latex/newpx\unpxsym.fd
+File: unpxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/npxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 25.
+ (G:\Latex\tex/latex/newpx\unpxsyc.fd
+File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
+)
+
+[1
+
+{C:/Users/chris/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Chapter 1.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.772 \newpage
+               [1
+
+]
+<benef.png, id=64, 448.293pt x 227.541pt>
+File: benef.png Graphic file (type png)
+<use benef.png>
+Package pdftex.def Info: benef.png  used on input line 794.
+(pdftex.def)             Requested size: 448.2919pt x 227.54044pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[2 <./benef.png>]
+
+[3]
+<coste.png, id=85, 438.219pt x 217.905pt>
+File: coste.png Graphic file (type png)
+<use coste.png>
+Package pdftex.def Info: coste.png  used on input line 859.
+(pdftex.def)             Requested size: 438.21793pt x 217.90446pt.
+<ABC.png, id=90, 448.95pt x 222.066pt>
+File: ABC.png Graphic file (type png)
+<use ABC.png>
+Package pdftex.def Info: ABC.png  used on input line 882.
+(pdftex.def)             Requested size: 393.1496pt x 194.4699pt.
+
+
+[4 <./coste.png> <./ABC.png>]
+
+[5] (PQI.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 38108 strings out of 473523
+ 747035 string characters out of 5731946
+ 1244967 words of memory out of 5000000
+ 60640 multiletter control sequences out of 15000+600000
+ 585670 words of font info for 111 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 103i,10n,108p,601b,1818s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1000.pk><G:/Latex/fonts/type1/public/newpx/NewPXMI_gnu.pfb><G:/Latex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><G:/Latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><G:/Latex/fonts/type1/public/amsfonts/cm/cmr10.pfb><G:/Latex/fonts/type1/public/amsfonts/cm/cmr17.pfb><G:/Latex/fonts/type1/public/newtx/txexs.pfb>
+Output written on PQI.pdf (6 pages, 424764 bytes).
+PDF statistics:
+ 151 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 240 words of extra memory for PDF output out of 10000 (max. 10000000)
+
