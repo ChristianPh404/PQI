@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1742792473.06411 "h:/universidad/3º/Procesos quimicos industriales/2025/PQI/PQI.tex" "PQI.pdf" "PQI" 1742792477.03594 0
+["pdflatex"] 1747282358.37555 "h:/universidad/3º/Procesos quimicos industriales/2025/PQI/PQI.tex" "PQI.pdf" "PQI" 1747282361.85779 0
   "C:/Users/chris/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1742784843.26455 157441 630ac9bca0e616d740d6f31fad22d781 ""
   "C:/Users/chris/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1741901494.02005 12018773 a7c2459d232e98b1cdef0a2a112416d5 ""
   "G:/Latex/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -251,8 +251,8 @@
   "G:/Latex/tex/latex/xfrac/xfrac.sty" 1718270407 14945 a207ee7fd6b8cf6d82afb367c583ddd3 ""
   "G:/Latex/tex/latex/xifthen/xifthen.sty" 1448274436 5689 1bfa68243e89a54479e7d0580773c57e ""
   "G:/Latex/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "PQI.aux" 1742792476.58295 1027 ddda9db39912b6adb22c5911c624352a "pdflatex"
-  "h:/universidad/3º/Procesos quimicos industriales/2025/PQI/PQI.tex" 1742792471.69795 27702 901cae9b00db739a36e8e8843acc8a34 ""
+  "PQI.aux" 1747282361.45376 1027 ddda9db39912b6adb22c5911c624352a "pdflatex"
+  "h:/universidad/3º/Procesos quimicos industriales/2025/PQI/PQI.tex" 1747282353.49051 27702 901cae9b00db739a36e8e8843acc8a34 ""
   "letterfonts.tex" 1740071483.77149 8702 ef32ca12e97530ef5734ca4adcb1f6b1 ""
   "macros.tex" 1740071483.77149 3477 30332a9dc4820add7ec8e91e30b45576 ""
   "preamble.tex" 1740071483.77199 20995 eb918edb38bbe0aaa64e0d68ad96eec0 ""

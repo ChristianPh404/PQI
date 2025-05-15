@@ -433,200 +433,455 @@
 % \end{raggedright}
 %!---------------------------------------------------------------------------------------------------------------------
 %!---------------------------------------------------------------------------------------------------------------------
-\section{Problema 9}
-\vspace{1\baselineskip}
+% \section{Problema 9}
+% \vspace{1\baselineskip}
 
+% \begin{raggedright}
+% 	\textbf{Una empresa farmacéutica debe lanzar al mercado un nuevo producto para contrarrestar el efecto de la competencia. 
+% 	Tras estudiar la situación, el departamento de nuevos productos ha informado que para que este nuevo producto llegue 
+% 	al mercado, es necesario la realización de 14 actividades que ha enumerado por orden alfabético de la A a la N.\\
+% 	\vspace{1\baselineskip}
+% 	La relación existente entre estas actividades es como sigue (véase la tabla siguiente para más información acerca de cada una de las actividades).}\\
+
+% 	 \begin{itemize}[label=--]
+% 		\item La relación existente entre estas actividades es como sigue (véase la tabla siguiente para más información acerca de cada una de las actividades). 
+% 		\item Hasta que no esté terminada la actividad A, no podrán empezar las actividades B, C y D. 
+% 		\item La actividad K exige para su realización que estén finalizadas las actividades E e I. 
+% 		\item Tras la ejecución de la actividad B, podrá realizarse tanto la F como la E
+% 		\item Solo cuando esté finalizada la actividad H, podrá iniciarse la J; y solo cuando haya terminado la actividad G podrá empezar la L. Cuando estén finalizadas estas actividades,  
+% 	 \end{itemize}
+
+% \vspace{2\baselineskip}
+% es decir la J y L, así como también la K podrá empezar la ejecución de la M, tras esta última podrá iniciarse la actividad N.\\
+% \vspace{1\baselineskip}
+% 	Para cada una de estas actividades se conoce sus tiempos de ejecución más probable (tmp), más pesimista (tp) y más
+% 	 optimista (to), así como el número de unidades de tiempo que puede reducirse cada actividad (tD), el coste normal 
+% 	 de ejecución de cada actividad (unidades monetarias que corresponde a su tiempo esperado de realización) y el coste 
+% 	 de urgencia de cada actividad (unidades monetarias que corresponde al tiempo de urgencia - tc). Estos datos se recogen
+% 	  en la tabla que se aporta al final del ejercicio.\\
+% \vspace{1\baselineskip}
+% \textbf{Se desea conocer:}\hypersetup{colorlinks=false, pdfborder={0 0 0}}
+% \begin{enumerate}
+% 	\item \hyperref[sec:9.1]{Duración esperada del proyecto de lanzamiento del nuevo producto}.
+% 	\item \hyperref[sec:9.2]{Probabilidad de concluir el lanzamiento del producto en menos de 29 días.}
+% 	\item \hyperref[sec:9.3]{Programa de lanzamiento del producto para que éste llegue al mercado en 29 días, al menor coste posible. ¿Cuál sería el coste?.}
+% 	\item \hyperref[sec:9.4]{¿Cuál sería la respuesta a la pregunta anterior si la actividad F no admitiera reducción alguna?.}
+% \end{enumerate}
+% \vspace{10\baselineskip}
+% \nt{Los apartados contienen hipervínculos para ir directamente a la respuesta.}
+% \begin{table}[h!]
+% 	\centering
+% 	\begin{tabular}{|c|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1.5cm}|c|c|c|}
+% 	\hline
+% 	Actividad & to & tmp & tp & \makecell{Unidades de \\ reducción (tD)} & Coste normal & Coste urgencia \\
+% 	\hline
+% 	A & 3 & 4 & 5 & 1 & 150 & 160 \\
+% 	B & 5 & 7 & 9 & 0 & 263 & 263 \\
+% 	C & 2 & 11 & 14 & 1 & 375 & 410 \\
+% 	D & 9 & 20 & 25 & 9 & 713 & 2153 \\
+% 	E & 2 & 4 & 12 & 2 & 188 & 290 \\
+% 	F & 14 & 19 & 30 & 2 & 800 & 1200 \\
+% 	G & 2 & 2 & 8 & 0 & 115 & 115 \\
+% 	H & 2 & 2 & 8 & 1 & 120 & 160 \\
+% 	I & 4 & 5 & 12 & 1 & 240 & 380 \\
+% 	J & 5 & 7 & 15 & 4 & 300 & 600 \\
+% 	K & 3 & 5 & 13 & 2 & 225 & 595 \\
+% 	L & 4 & 5 & 6 & 0 & 190 & 190 \\
+% 	M & 1 & 1 & 7 & 1 & 75 & 100 \\
+% 	N & 2 & 3 & 10 & 2 & 160 & 400 \\
+% 	\hline
+% 	\multicolumn{5}{|c|}{TOTAL} & 3914 u.m. & 7016 u.m. \\
+% 	\hline
+% 	\end{tabular}
+% 	\caption{Tabla Proporcionada}
+% 	\label{tab:actividades}
+% 	\end{table}
+% \newpage
+% \sol \\
+% \vspace{2\baselineskip}
+% \textbf{\circled{1}}\label{sec:9.1}\\
+% \vspace{2\baselineskip}
+% \noindent Primero se procede a elaborar una tabla donde se recoje la información de las actividades y sus precedentes.\\
+% \begin{table}[h]
+% 	\centering
+% 	\renewcommand{\arraystretch}{1.2}  % Aumenta el espaciado entre filas para mejor legibilidad
+% 	\begin{tabular}{cc}
+% 		\toprule
+% 		\textbf{Actividad} & \textbf{Actividad Precedente}  \\
+% 		\midrule
+% 		A & - \\
+% 		B & A \\
+% 		C & A \\
+% 		D & A \\
+% 		E & B \\
+% 		F & B \\
+% 		G & C \\
+% 		H & C \\
+% 		I & C \\
+% 		J & H \\
+% 		K & E,I \\
+% 		L & G \\
+% 		M & J,L,K \\
+% 		N & M \\
+% 		\bottomrule
+% 	\end{tabular}
+% \caption{Tabla de Registro de Actividades}
+% \end{table}
+% \begin{center}
+% 		\begin{tikzpicture}[->, >=latex, node distance=2cm, every node/.style={draw, circle, minimum size=10mm, outer sep=2pt}]
+% 			% Nodos
+% 			\node (1) at (-2,0) {1};
+% 			\node (3) at (4,3) {3};
+% 			\node (2) at (1,0) {2};
+% 			\node (4) at (3.75,0) {4};
+% 			\node (5) at (5,1.5) {5};
+% 			\node (7) at (5,-1.5) {7};
+% 			\node (6) at (6.5,0) {6};
+% 			\node (8) at (9.5,0) {8};
+% 			\node (9) at (11.5,0) {9};
+% 			\node (10) at (13.5,0) {10};
+	
+% 			% Arcos
+% 			\draw[red] (1) -> (2);
+% 			\draw[bend left=15,red] (2) to (3);
+% 			\draw (2) -> (4);
+% 			\draw (3) -> (5);
+% 			\draw (4) -> (6);
+% 			\draw (4) -> (5);
+% 			\draw (4) -> (7);
+% 			\draw[bend left=15,red] (3) to (10);
+% 			\draw[bend right=45] (2) to (10);
+% 			\draw (5) -> (8);
+% 			\draw (6) -> (8);
+% 			\draw (8) -> (9);
+% 			\draw (9) -> (10);
+% 			\draw (7) -> (8);
+
+% 			%!corregir
+% 			\path (-.5,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{A}}; %* 1-2
+% 			\path (-2,.1) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(0,0)}}; %* 1-2
+% 			\path (.9,.1) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(4,4)}}; %* 1-2
+% 			\path (2.5,1.6) node[draw=none, fill=none, rotate=37, above ,text=red!60!black] {\texttt{B}}; %* 2-3
+% 			\path (2.4,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{C}}; %* 2-4
+% 			\path (3.65,0) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(15,16)}}; %* 1-2
+% 			\path (5,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{H}}; %* 2-4
+% 			\path (6.5,-.2) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(17,19)}}; %* 1-2
+% 			\path (7.75,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{J}}; %* 2-4
+% 			\path (9.45,-.1) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(25,26)}}; %* 1-2
+% 			\path (10.4,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{M}}; %* 2-4
+% 			\path (11.45,-.15) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(26,27)}}; %* 1-2
+% 			\path (12.4,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{N}}; %* 2-
+% 			\path (13.5,-.1) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(30,30)}}; %* 1-2
+% 			% \path (0.5,0.2) node [draw=none, fill=none, rotate=20, above ,text=red!60!black] {\texttt{A}}; %* 1-3
+% 			\path (5.25,1.35) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(20,21)}}; %* 1-
+% 			\path (4,3) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(11,11)}}; %* 1-
+% 			\path (5.1,-1.32) node[draw=none, fill=none, below ,text=green!60!black] {\texttt{(17,21)}}; %* 1-
+% 			\path (7,-1.9) node[draw=none, fill=none, below ,text=red!60!black] {\texttt{D}}; %* 2-3
+% 			\path (8,2.2) node[draw=none, fill=none,rotate=-15, above ,text=red!60!black] {\texttt{F}}; %* 2-3
+% 			\path (6.5,0.65) node[draw=none, fill=none,rotate=-15, above ,text=red!60!black] {\texttt{K}}; %* 1-
+% 			\path (4.2,1.65) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{E}}; %* 1-
+% 			\path (4.2,-1.5) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{G}}; %* 1-
+% 			\path (6.75,-0.65) node[draw=none, fill=none,rotate=15, below ,text=red!60!black] {\texttt{L}}; %* 1-
+% 		\end{tikzpicture}
+% \end{center}
+% es decir la duracion esperada del proyecto es de 30 dias, y su ruta critica A,B,F.\\
+% \vspace{2\baselineskip}
+% \textbf{\circled{2}}\label{sec:9.2}\\
+% \cor{}{\begin{equation*}
+% 	\text{Te} = \frac{4a+6m+b}{6}
+% \end{equation*}
+% \begin{equation*}
+% 	\text{Varianza},\sigma^2 = \frac{(b-a)^2}{36}
+% \end{equation*}}
+% \begin{table}[h]
+% 	\centering
+% 	\renewcommand{\arraystretch}{1.2}  % Aumenta el espaciado entre filas para mejor legibilidad
+% 	\begin{tabular}{ccc}
+% 		\toprule
+% 		\textbf{-} & \textbf{T.estimado} & \textbf{$\sigma^2$}  \\
+% 		\midrule
+% 		A & 4 & 0.11 \\
+% 		B & 7 & 0.44 \\
+% 		F & 20 & 7.11 \\
+% 		\midrule
+% 		\textbf{Total} & - & 7.66 \\
+% 	\end{tabular}
+% 	\caption{Tabla varianza}
+% \end{table}
+% \vspace{1\baselineskip}
+% \noindent es decir la varianza es de 7.66, y la desviacion estandar es de 2.77. Por lo que se puede usar en la tabla tipificada.
+
+% \begin{equation*}
+% 	Z = \frac{x-\mu}{\sigma} = \frac{29-30}{2.77} = -0.36
+% \end{equation*}
+% Dando un valor en la tabla de 0.3594 es decir que se trata del 35.94$\%$ de probabilidad de que el proyecto termine en 29 semanas.\\
+% \nt{al tratarse de un numero negativo se nota directamente el valor de la tabla, de forma contraria seria 1-0.3594}
+% \newpage
+
+% \textbf{\circled{3}}\label{sec:9.3}\\
+% \vspace{2\baselineskip}
+
+% \cor{}{\begin{equation*}
+% 	\text{sd} = \frac{\text{cc-cn}}{\text{tD}}
+% \end{equation*}
+% \begin{itemize}
+% 	\item cc = Coste critico
+% 	\item cn = Coste normal
+% \end{itemize}}
+% \begin{table}[h]
+%     \centering
+%     \renewcommand{\arraystretch}{1.5}  % Aumenta el espaciado entre filas
+%     \setlength{\tabcolsep}{15pt}  % Aumenta el espacio entre columnas
+%     \begin{tabular}{ccc}
+%         \toprule
+%         \textbf{-} & \textbf{tD} & \textbf{sd} \\
+%         \midrule
+% 		A & $\textcolor{red}{\cancelto{0}{\textcolor{black}{1}}}$ & 150 \\
+%         B & 0 & 0 \\
+%         F & 2 & 200 \\
+%         \bottomrule
+%     \end{tabular}
+%     \caption{Tabla de reducción}
+% \end{table}
+% \noindent Aunque la reduccion con el menor costo seria de B , no es posible, por lo tanto el segundo con menor coste es el A, por lo que se procede a reducirlo.\\
+
+% \begin{center}
+% 	\begin{tikzpicture}[->, >=latex, node distance=2cm, every node/.style={draw, circle, minimum size=10mm, outer sep=2pt}]
+% 		% Nodos
+% 		\node (1) at (-2,0) {1};
+% 		\node (3) at (4,3) {3};
+% 		\node (2) at (1,0) {2};
+% 		\node (4) at (3.75,0) {4};
+% 		\node (5) at (5,1.5) {5};
+% 		\node (7) at (5,-1.5) {7};
+% 		\node (6) at (6.5,0) {6};
+% 		\node (8) at (9.5,0) {8};
+% 		\node (9) at (11.5,0) {9};
+% 		\node (10) at (13.5,0) {10};
+
+% 		% Arcos
+% 		\draw[red] (1) -> (2);
+% 		\draw[bend left=15,red] (2) to (3);
+% 		\draw (2) -> (4);
+% 		\draw (3) -> (5);
+% 		\draw (4) -> (6);
+% 		\draw (4) -> (5);
+% 		\draw (4) -> (7);
+% 		\draw[bend left=15,red] (3) to (10);
+% 		\draw[bend right=45] (2) to (10);
+% 		\draw (5) -> (8);
+% 		\draw (6) -> (8);
+% 		\draw (8) -> (9);
+% 		\draw (9) -> (10);
+% 		\draw (7) -> (8);
+
+% 		%!corregir
+% 		\path (-.5,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{A}}; %* 1-2
+% 		\path (-2,.1) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(0,0)}}; %* 1-2
+% 		\path (.9,.1) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(3,3)}}; %* 1-2
+% 		\path (2.5,1.6) node[draw=none, fill=none, rotate=37, above ,text=red!60!black] {\texttt{B}}; %* 2-3
+% 		\path (2.4,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{C}}; %* 2-4
+% 		\path (3.65,0) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(14,15)}}; %* 1-2
+% 		\path (5,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{H}}; %* 2-4
+% 		\path (6.5,-.2) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(16,18)}}; %* 1-2
+% 		\path (7.75,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{J}}; %* 2-4
+% 		\path (9.45,-.1) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(24,25)}}; %* 1-2
+% 		\path (10.4,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{M}}; %* 2-4
+% 		\path (11.45,-.15) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(25,26)}}; %* 1-2
+% 		\path (12.4,-.3) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{N}}; %* 2-
+% 		\path (13.5,-.1) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(29,29)}}; %* 1-2
+% 		% \path (0.5,0.2) node [draw=none, fill=none, rotate=20, above ,text=red!60!black] {\texttt{A}}; %* 1-3
+% 		\path (5.25,1.35) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(19,20)}}; %* 1-
+% 		\path (4,3) node[draw=none, fill=none, above ,text=green!60!black] {\texttt{(10,10)}}; %* 1-
+% 		\path (5.1,-1.32) node[draw=none, fill=none, below ,text=green!60!black] {\texttt{(16,20)}}; %* 1-
+% 		\path (7,-1.9) node[draw=none, fill=none, below ,text=red!60!black] {\texttt{D}}; %* 2-3
+% 		\path (8,2.2) node[draw=none, fill=none,rotate=-15, above ,text=red!60!black] {\texttt{F}}; %* 2-3
+% 		\path (6.5,0.65) node[draw=none, fill=none,rotate=-15, above ,text=red!60!black] {\texttt{K}}; %* 1-
+% 		\path (4.2,1.65) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{E}}; %* 1-
+% 		\path (4.2,-1.5) node[draw=none, fill=none, above ,text=red!60!black] {\texttt{G}}; %* 1-
+% 		\path (6.75,-0.65) node[draw=none, fill=none,rotate=15, below ,text=red!60!black] {\texttt{L}}; %* 1-
+% 	\end{tikzpicture}
+% \end{center}
+% \nt{Coste total 3914 + 10 = 3924 u.m.}
+% \vspace{2\baselineskip}
+% \textbf{\circled{4}}\label{sec:9.4}\\
+% \vspace{1\baselineskip}
+% \noindent No habría ninguna modificación en el resultado, ya que el coste de la actividad F no se modifico por criterio economico ya que era mas barato reducir la actividad A.\\
+\chapter{Metodo ABC}
 \begin{raggedright}
-	\textbf{Una empresa farmacéutica debe lanzar al mercado un nuevo producto para contrarrestar el efecto de la competencia. 
-	Tras estudiar la situación, el departamento de nuevos productos ha informado que para que este nuevo producto llegue 
-	al mercado, es necesario la realización de 14 actividades que ha enumerado por orden alfabético de la A a la N.\\
-	\vspace{1\baselineskip}
-	La relación existente entre estas actividades es como sigue (véase la tabla siguiente para más información acerca de cada una de las actividades).}\\
-
-	 \begin{itemize}[label=--]
-		\item La relación existente entre estas actividades es como sigue (véase la tabla siguiente para más información acerca de cada una de las actividades). 
-		\item Hasta que no esté terminada la actividad A, no podrán empezar las actividades B, C y D. 
-		\item La actividad K exige para su realización que estén finalizadas las actividades E e I. 
-		\item Tras la ejecución de la actividad B, podrá realizarse tanto la F como la E
-		\item Solo cuando esté finalizada la actividad H, podrá iniciarse la J; y solo cuando haya terminado la actividad G podrá empezar la L. Cuando estén finalizadas estas actividades,  
-	 \end{itemize}
-
-\vspace{2\baselineskip}
-es decir la J y L, así como también la K podrá empezar la ejecución de la M, tras esta última podrá iniciarse la actividad N.\\
-\vspace{1\baselineskip}
-	Para cada una de estas actividades se conoce sus tiempos de ejecución más probable (tmp), más pesimista (tp) y más
-	 optimista (to), así como el número de unidades de tiempo que puede reducirse cada actividad (tD), el coste normal 
-	 de ejecución de cada actividad (unidades monetarias que corresponde a su tiempo esperado de realización) y el coste 
-	 de urgencia de cada actividad (unidades monetarias que corresponde al tiempo de urgencia - tc). Estos datos se recogen
-	  en la tabla que se aporta al final del ejercicio.\\
-\vspace{1\baselineskip}
-\textbf{Se desea conocer:}
-\begin{enumerate}
-	\item Duración esperada del proyecto de lanzamiento del nuevo producto %\hyperref[sec:intro]{introducción}.
-	\item Probabilidad de concluir el lanzamiento del producto en menos de 29 días. 
-	\item Programa de lanzamiento del producto para que éste llegue al mercado en 29 días, al menor coste posible. ¿Cuál sería el coste?. 
-	\item ¿Cuál sería la respuesta a la pregunta anterior si la actividad F no admitiera reducción alguna?.
-\end{enumerate}
-\vspace{10\baselineskip}
-\nt{Los apartados contienen hipervínculos para ir directamente a la respuesta.}
-\begin{table}[h!]
-	\centering
-	\begin{tabular}{|c|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1.5cm}|c|c|c|}
-	\hline
-	Actividad & to & tmp & tp & \makecell{Unidades de \\ reducción (tD)} & Coste normal & Coste urgencia \\
-	\hline
-	A & 3 & 4 & 5 & 1 & 150 & 160 \\
-	B & 5 & 7 & 9 & 0 & 263 & 263 \\
-	C & 2 & 11 & 14 & 1 & 375 & 410 \\
-	D & 9 & 20 & 25 & 9 & 713 & 2153 \\
-	E & 2 & 4 & 12 & 2 & 188 & 290 \\
-	F & 14 & 19 & 30 & 2 & 800 & 1200 \\
-	G & 2 & 2 & 8 & 0 & 115 & 115 \\
-	H & 2 & 2 & 8 & 1 & 120 & 160 \\
-	I & 4 & 5 & 12 & 1 & 240 & 380 \\
-	J & 5 & 7 & 15 & 4 & 300 & 600 \\
-	K & 3 & 5 & 13 & 2 & 225 & 595 \\
-	L & 4 & 5 & 6 & 0 & 190 & 190 \\
-	M & 1 & 1 & 7 & 1 & 75 & 100 \\
-	N & 2 & 3 & 10 & 2 & 160 & 400 \\
-	\hline
-	\multicolumn{5}{|c|}{TOTAL} & 3914 u.m. & 7016 u.m. \\
-	\hline
-	\end{tabular}
-	\caption{Tabla Proporcionada}
-	\label{tab:actividades}
-	\end{table}
-\newpage
-\sol \\
-\vspace{2\baselineskip}
-\textbf{\circled{1}}\label{sec:9.1}\\
-\vspace{2\baselineskip}
-\noindent Primero se procede a elaborar una tabla donde se recoje la información de las actividades y sus precedentes.\\
+Un concesionario de coches comercializa 7 modelos (A1 à A7). Primero fabrica los coches, y luego los vende. Se conoce:
 \begin{table}[h]
 	\centering
-	\renewcommand{\arraystretch}{1.2}  % Aumenta el espaciado entre filas para mejor legibilidad
-	\begin{tabular}{cc}
+	\begin{tabular}{cccc}
 		\toprule
-		\textbf{Actividad} & \textbf{Actividad Precedente}  \\
+		\textbf{Modelo} & \textbf{Coste de fabricación} & \textbf{Benef. Unitario por venta} & \textbf{N° unidades comercializadas} \\
 		\midrule
-		A & - \\
-		B & A \\
-		C & A \\
-		D & A \\
-		E & B \\
-		F & B \\
-		G & C \\
-		H & C \\
-		I & C \\
-		J & H \\
-		K & E,I \\
-		L & G \\
-		M & J,L,K \\
-		N & M \\
+		A1 & 10.000 & 5.000 & 100.000 \\
+		A2 & 15.000 & 7.000 & 50.000 \\
+		A3 & 16.000 & 7.500 & 250.000 \\
+		A4 & 20.000 & 10.000 & 75.000 \\
+		A5 & 22.000 & 12.000 & 150.000 \\
+		A6 & 25.000 & 11.000 & 30.000 \\
+		A7 & 25.500 & 10.500 & 15.000 \\
 		\bottomrule
 	\end{tabular}
-\caption{Tabla de Registro de Actividades}
+	\caption{Tabla de datos proporcionados}
 \end{table}
-\begin{center}
-		\begin{tikzpicture}[->, >=latex, node distance=2cm, every node/.style={draw, circle, minimum size=10mm, outer sep=2pt}]
-			% Nodos
-			\node (1) at (-2,0) {1};
-			\node (3) at (4,3) {3};
-			\node (2) at (1,0) {2};
-			\node (4) at (3.75,0) {4};
-			\node (5) at (5,1.5) {5};
-			\node (7) at (5,-1.5) {7};
-			\node (6) at (6.5,0) {6};
-			\node (8) at (9.5,0) {8};
-			\node (9) at (11.5,0) {9};
-			\node (10) at (13.5,0) {10};
-	
-			% Arcos
-			\draw[red] (1) -> (2);
-			\draw[bend left=15,red] (2) to (3);
-			\draw (2) -> (4);
-			\draw (3) -> (5);
-			\draw (4) -> (6);
-			\draw (4) -> (5);
-			\draw (4) -> (7);
-			\draw[bend left=15,red] (3) to (10);
-			\draw[bend right=45] (2) to (10);
-			\draw (5) -> (8);
-			\draw (6) -> (8);
-			\draw (8) -> (9);
-			\draw (9) -> (10);
-			\draw (7) -> (8);
-			
-			%\draw (5) -> (7);
-			%\draw[dashed] (1) -> (2);
-			%\draw[bend left] (1) to (2);
-			%\draw[dotted] (1) -> (2);
-			%draw[bend right=45] (1) to (2);
+\section{Calculo de beneficios}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cccc}
+		\toprule
+		\textbf{Modelo} & \textbf{Beneficio unitario} & \textbf{Beneficio total} & \textbf{$\%$ de beneficio sobre el total} \\
+		\midrule
+		A1 & 5.000  & 5.00E+0.8 & 8.68$\%$ \\
+		A2 & 7.000  & 3.50E+0.8 & 6.07$\%$ \\
+		A3 & 7.500  & 1.88E+0.9 & 32.54$\%$ \\
+		A4 & 10.000 & 7.50E+0.8 & 13.02$\%$ \\
+		A5 & 12.000 & 1.80E+0.9 & 31.24$\%$ \\
+		A6 & 11.000 & 3.30E+08  & 5.73$\%$\\
+		A7 & 10.500 & 1.58E+08  & 2.73$\%$\\
+		\midrule
+		$\sum$ & - & 5.76E+09 & 100$\%$ \\
+		\bottomrule
+		\end{tabular}
+	\caption{Tabla de beneficios}
+\end{table}
+reordenando los datos por el $\%$ de beneficio total, y calculando el acumulado ademas añadiendo columnas para la cantidad de cada modelo se obtiene la siguiente tabla.\\
+\nt{el beneficio total unitario es de 63.000 en la tabla se ha omitido para no generar confusion de que el $\%$ de beneficio es sobre el total de unidades vendidas.}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cccc}
+		\toprule
+		\textbf{Modelo} & \textbf{Beneficio total} & \textbf{$\%$ de beneficio sobre el total} & \textbf{Acumulado} \\
+		\midrule
+		A3 & 1.88E+0.9 & 32.54$\%$ & 32.54$\%$ \\
+		A5 & 1.80E+0.9 & 31.24$\%$ & 63.78$\%$ \\
+		A4 & 7.50E+0.8 & 13.02$\%$ & 76.80$\%$ \\
+		A2 & 3.50E+0.8 & 6.07$\%$ & 82.87$\%$  \\
+		A1 & 5.00E+0.8 & 8.68$\%$ & 91.55$\%$  \\
+		A6 & 3.30E+08  & 5.73$\%$& 97.28$\%$   \\
+		A7 & 1.58E+08  & 2.73$\%$&100$\%$      \\
+		\midrule
+		$\sum$ & 5.76E+09 & 100$\%$ & - \\
+		\bottomrule
+	\end{tabular}
+	\caption{Tabla de beneficios acumulados}
+\end{table}
+Se procede a calcular la cantidad de cada modelo que se comercializado, y el porcentaje de cada modelo sobre el total de unidades comercializadas.\\
+\newpage
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ccccc}
+		\toprule
+		\textbf{Modelo} & \textbf{N° und. vendidas} &\textbf{$\%$ und. vendidas} & \textbf{$\%$ Acumulado} & \textbf{und.vendidas}  \\
+		\midrule
+		A3 & 250.000 & 37.31$\%$ & 37.31$\%$ & 250.000 \\
+		A5 & 150.000 & 22.39$\%$ & 59.70$\%$ & 400.000 \\
+		A4 & 75.000  & 11.19$\%$ & 70.90$\%$ & 475.000 \\
+		A2 & 50.000  & 7.46$\%$ & 85.82$\%$ & 575.000  \\
+		A1 & 100.000 & 14.93$\%$ & 93.28$\%$ & 625.000 \\
+		A6 & 30.000  & 4.48$\%$ & 97.76$\%$ & 655.000  \\
+		A7 & 15.000  & 2.24$\%$ & 100$\%$ & 670.000    \\
+		\midrule
+		$\sum$ & 670.000 & 100$\%$ & - & - \\
+		\bottomrule
+	\end{tabular}
+	\caption{Tabla de unidades comercializadas}
+\end{table}
+donde al graficar el $\%$ de beneficio acumulado y el $ \%$ de unidades acumuladas vendidas se obtiene la siguiente grafica.\\
+\vspace{1\baselineskip}
+\includegraphics{benef.png}\\
+\vspace{1\baselineskip}
 
-			%!corregir
-			% \path (1,1.2) node[draw=none, fill=none, rotate=30, above ,text=red!60!black] {\texttt{F}}; %* 1-2
-			% \path (0.5,0.2) node [draw=none, fill=none, rotate=20, above ,text=red!60!black] {\texttt{A}}; %* 1-3
-			% \path (0.75,-0.4) node [draw=none, fill=none, above ,text=red!60!black] {\texttt{B}}; %* 1-4
-			% \path (0.5,-1.2) node [draw=none, fill=none, rotate=-17, above ,text=red!60!black] {\texttt{C}}; %* 1-5
-			% \path (3.64,0.4) node [draw=none, fill=none, rotate=50, above ,text=red!60!black] {\texttt{F1}}; %* 3-4
-			% \path (3.3,-1) node [draw=none, fill=none, rotate=50, above ,text=red!60!black] {\texttt{F2}}; %* 5-4
-			% \path (4.2,-2) node [draw=none, fill=none, rotate=3, above ,text=red!60!black] {\texttt{F3}}; %* 4-6
-			% \path (5.5,1.3) node [draw=none, fill=none, rotate=-40, above ,text=red!60!black] {\texttt{G}}; %* 2-7
-			% \path (5.4,-0.3) node [draw=none, fill=none,  above ,text=red!60!black] {\texttt{D}}; %* 4-7
-			% \path (8.4,-0.3) node [draw=none, fill=none,  above ,text=red!60!black] {\texttt{H}}; %*7-8
-			% \path (5.75,-1.8) node [draw=none, fill=none,  above, rotate=45 ,text=red!60!black] {\texttt{J}}; %* 7-8
-			% \path (1,-1.15) node [draw=none, fill=none,  below,rotate = -25 ,text=red!60!black] {\texttt{I}}; %* 7-8
-			% \path (3.14,1.3) node [draw=none, fill=none, rotate=-30, above ,text=red!60!black] {\texttt{E}}; %* 3-4
-		\end{tikzpicture}
-\end{center}
-Como de 1 nodo al siguiente solo puede haber 1 actividad, se ha implementado varios nodos con actividades ficticias, ante la información
-Dada surgen 2 posibilidades ya que no esta totalmente definido, bien el caso anterior o el siguiente.\\
-\begin{center}
-	\begin{tikzpicture}[->, >=latex, node distance=2cm, every node/.style={draw, circle, minimum size=10mm, outer sep=2pt}]
-		% Nodos
-		\node (1) at (-2,0) {1};
-		\node (2) at (4,3) {2};
-		\node (3) at (2.5,1) {3};
-		\node (4) at (3.75,0) {4}; %! modificado
-		\node (5) at (2.5,-1.5) {5};
-		\node (6) at (4,-3) {6};
-		\node (7) at (7.5,0) {7};
-		\node (8) at (9.5,0) {8};
-
-		% Arcos
-		\draw (1) -> (2);
-		\draw (1) -> (6);
-		\draw (1) -> (3);
-		\draw (1) -> (5);
-		\draw (1) -> (4);
-		\draw (2) -> (7);
-		\draw (4) -> (7);
-		\draw[dashed] (3) -> (4);
-		\draw (3) -> (2);
-		\draw[dashed] (4) -> (5);
-		\draw[dashed] (6) -> (4);
-		\draw (6) -> (7);
-		
-		\draw (7) -> (8);
-		%\draw (5) -> (7);
-		%\draw[dashed] (1) -> (2);
-		%\draw[bend left] (1) to (2);
-		%\draw[dotted] (1) -> (2);
-		%draw[bend right=45] (1) to (2);
-		\path (1,1.2) node[draw=none, fill=none, rotate=30, above ,text=red!60!black] {\texttt{F}}; %* 1-2
-		\path (0.5,0.2) node [draw=none, fill=none, rotate=20, above ,text=red!60!black] {\texttt{A}}; %* 1-3
-		\path (0.75,-0.4) node [draw=none, fill=none, above ,text=red!60!black] {\texttt{B}}; %* 1-4
-		\path (0.5,-1.2) node [draw=none, fill=none, rotate=-17, above ,text=red!60!black] {\texttt{C}}; %* 1-5
-		\path (3.64,0.4) node [draw=none, fill=none, rotate=50, above ,text=red!60!black] {\texttt{F1}}; %* 3-4
-		\path (3.3,-1) node [draw=none, fill=none, rotate=50, above ,text=red!60!black] {\texttt{F2}}; %* 5-4
-		\path (4.2,-2) node [draw=none, fill=none, rotate=3, above ,text=red!60!black] {\texttt{F3}}; %* 4-6
-		\path (5.5,1.3) node [draw=none, fill=none, rotate=-40, above ,text=red!60!black] {\texttt{G}}; %* 2-7
-		\path (5.4,-0.3) node [draw=none, fill=none,  above ,text=red!60!black] {\texttt{D}}; %* 4-7
-		\path (8.4,-0.3) node [draw=none, fill=none,  above ,text=red!60!black] {\texttt{H}}; %*7-8
-		\path (5.75,-1.8) node [draw=none, fill=none,  above, rotate=45 ,text=red!60!black] {\texttt{J}}; %* 7-8
-		\path (1,-1.15) node [draw=none, fill=none,  below,rotate = -25 ,text=red!60!black] {\texttt{I}}; %* 7-8
-		\path (3.14,1.3) node [draw=none, fill=none, rotate=-30, above ,text=red!60!black] {\texttt{E}}; %* 3-4
-	\end{tikzpicture}
-\end{center}
+Para la zona A se ha elegido aquellos modelos que tienen un porcentaje de beneficio acumulado menor al 70$\%$ y un porcentaje de unidades vendidas acumuladas menor al 40$\%$, es decir A3 mientras que para la zona B se ha elegido aquellos modelos que tienen un porcentaje de beneficio acumulado un 25$\%$ superior al tramo A y un coste de fabricacion de hasta el 85$\%$ del total, es decir A5 y A4, en la zona C quedaria el resto de los modelos\\
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc}
+		\toprule
+		\textbf{modelo} & \textbf{Zona}  \\
+		\midrule
+		A1 & C \\
+		A2 & C \\
+		A3 & A \\
+		A4 & B \\
+		A5 & B \\
+		A6 & C \\
+		A7 & C \\
+		\bottomrule
+	\end{tabular}
+	\caption{Tabla de zonas para los modelos segun el beneficio}
+\end{table}
+\newpage
+\subsection{ABC costes}
+de forma analoga se puede realizar el analisis de costes, donde se tiene la siguiente tabla.\\
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cccc}
+		\toprule
+		\textbf{Modelo} & \textbf{Coste de fabricación} & \textbf{Coste total} & \textbf{$\%$ de coste sobre el total} \\
+		\midrule
+		A1 & 10.000 & 1.00E+09 & 8.56$\%$ \\
+		A2 & 15.000 & 7.50E+08 & 6.42$\%$ \\
+		A3 & 16.000 & 4.00E+09 & 34.24$\%$ \\
+		A4 & 20.000 & 1.50E+09 & 12.84$\%$ \\
+		A5 & 22.000 & 3.30E+09 & 28.25$\%$ \\
+		A6 & 25.000 & 7.50E+08 & 6.42$\%$ \\
+		A7 & 25.500 & 3.83E+08 & 3.27$\%$ \\
+		\midrule
+		$\sum$ & - & 1.17E+10 &100$\%$\\
+		\bottomrule
+	\end{tabular}
+	\caption{Tabla de costes}
+\end{table}
+\nt{la sumatoria de los costes de fabricacion es de 133.500 solo que para evitar confusiones no se ha añadadio en la tabla.}
+si reordenamos la tabla por el porcentaje de forma descendente y calculamos el acumulado se obtiene la siguiente tabla.\\
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cccc}
+		\toprule
+		\textbf{Modelo} & \textbf{Coste total} & \textbf{$\%$ de coste sobre el total} & \textbf{Acumulado} \\
+		\midrule
+		A3 & 4.00E+09 & 34.24$\%$ & 34.24$\%$ \\
+		A5 & 3.30E+09 & 28.25$\%$ & 62.49$\%$ \\
+		A4 & 1.50E+09 & 12.84$\%$ & 75.33$\%$ \\
+		A1 & 1.00E+09 & 8.56$\%$ & 83.89$\%$ \\
+		A2 & 7.50E+08 & 6.42$\%$ & 90.31$\%$ \\
+		A6 & 7.50E+08 & 6.42$\%$&96.73$\%$\\
+		A7 & 3.83E+08 & 3.27$\%$&100$\%$\\
+		\midrule
+		$\sum$ & - & -& -\\
+		\bottomrule
+	\end{tabular}
+	\caption{Tabla de costes acumulados}
+\end{table}
+\newpage
+\includegraphics{coste.png}\\
+\vspace{1\baselineskip}
+al trasladarlo a la tabla de zonas, y uniendola con la tabla de beneficios se obtiene la siguiente tabla.\\
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cccc}
+		\toprule
+		\textbf{modelo} & \textbf{Zona beneficio} & \textbf{Zona coste} & \textbf{Zona final} \\
+		\midrule
+		A1 & C & C & C \\
+		A2 & B & B & B \\
+		A3 & A & A & A \\
+		A4 & B & B & B \\
+		A5 & B & A & A \\
+		A6 & C & C & C \\
+		A7 & C & C & C \\
+		\bottomrule
+	\end{tabular}
+	\caption{Tabla de zonas finales}
+\end{table}
+\nt{en la zona final se ha asignado cuando ambas zonas coinciden, y en caso contrario se ha asignado la de menor rango siendo A$<$ B$<$ C.}
+Tambien se puede apreciar en la grafica al representar tanto el coste como el beneficio para el eje de las ordenadas y el porcentaje de unidades vendidas para el eje de las abscisas.\\
+\vspace{1\baselineskip}
+\includegraphics[width=0.8\textwidth]{ABC.png}\\
+\section{Conclusiones}
+Aunque el modelo A3 es el que mayor coste genera, a su vez es el que mayor beneficio genera, por lo que se puede considerar como el modelo estrella, mientras que el modelo A7 es el que menor coste y beneficio genera por tanto la rotación de stock es muy baja siendo el modelo de menor rendimiento mientras el A3 al ser el producto estrella siendo el que mayor rotacion de sotck genera
+sera aquel que se deba tener un mayor control de stock, mientras que el A7 sera aquel que menos control se le de.\\
 \end{raggedright}
 \end{document}
